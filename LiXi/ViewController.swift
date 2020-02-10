@@ -26,20 +26,21 @@ class ViewController: UIViewController {
     @IBAction func onPress(_ sender: Any) {
         if isOpen{
                     baoLiXiImageView.image = UIImage(named: "tienlixi.png")
-                    openButton.setTitle("Chúc mừng bạn", for: .normal)
+                    openButton.setTitle("Mở tiếp", for: .normal)
                     isOpen = false
                 }else{
-                    baoLiXiImageView.image = UIImage(named: "tienlixi.png")
+                    baoLiXiImageView.image = UIImage(named: "lixi.png")
                     openButton.setTitle("Mở lì xì", for: .normal)
                     isOpen = true
+            ranDomTien()
     }
-        soTienLabel.text = String(ranDomTien())
+        soTienLabel.text = String("\(ranDomTien()) vnđ")
 }
     func ranDomTien() -> Int{
         let m = Int.random(in: 1000...1000000)
         
         if n == m {
-            ranDomTien()
+            
         }
         n = m
         return m
